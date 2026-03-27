@@ -1,5 +1,5 @@
 # 2048 GAME - JS IMPLEMENTED
-Fun and easy game for a rest. Have cozy and smooth design.
+>Fun and easy game for a rest. Have cozy and smooth design.
 
 
 ## LINK FOR THE GAME
