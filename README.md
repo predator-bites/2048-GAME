@@ -14,13 +14,19 @@ https://predator-bites.github.io/2048-GAME/
 ## HOW TO START IT LOCALLY
 - Clone repository
 
-```git clone https://github.com/predator-bites/2048-GAME.git```
+```
+git clone https://github.com/predator-bites/2048-GAME.git
+```
 
 - Install dependencies
 
-```npm install```
+```
+npm install
+```
 
 - Start project on local machine
 
-```npm start```
+```
+npm start
+```
 
