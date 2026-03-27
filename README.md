@@ -2,16 +2,16 @@
 Fun and easy game for a rest. Have cozy and smooth design.
 
 
-## <ins> LINK FOR THE GAME</ins>
+## LINK FOR THE GAME
 https://predator-bites.github.io/2048-GAME/
 
 
-## <ins>TECHNOLOGIES USED</ins>
+## TECHNOLOGIES USED
 1. SCSS (styling)
 2. JavaScript (core features)
 
 
-## <ins>HOW TO START IT LOCALLY</ins>
+## HOW TO START IT LOCALLY
 - Clone repository
 
 ```git clone https://github.com/predator-bites/2048-GAME.git```
