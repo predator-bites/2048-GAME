@@ -1,14 +1,14 @@
 # 2048 GAME - JS IMPLEMENTED
 Fun and easy game for a rest. Have cozy and smooth design.
 
-### LINK FOR THE GAME 
+### <ins> LINK FOR THE GAME</ins>
 https://predator-bites.github.io/2048-GAME/
 
-### TECHNOLOGIES USED
+### <ins>TECHNOLOGIES USED</ins>
 1. SCSS (styling)
 2. JavaScript (core features)
 
-### HOW TO START IT LOCALLY
+### <ins>HOW TO START IT LOCALLY</ins>
 - Clone repository
 
 ```git clone https://github.com/predator-bites/2048-GAME.git```
