@@ -1,32 +1,38 @@
-# 2048 GAME - JS IMPLEMENTED
->Fun and easy game for a rest. Have cozy and smooth design.
+
+# 2048 - GAME OF GENERATIONS
+
+Its the game where you need to combine blocks with same numbers.
 
 
-## LINK FOR THE GAME
-https://predator-bites.github.io/2048-GAME/
+## Introduction
+
+2048 is a training project that helped me to improve planning of my code, acquire knowledge on practise.
+
+[Play for free](https://predator-bites.github.io/2048-GAME/)
+## Features
+
+- Cozy design
+- Fast workflow
 
 
-## TECHNOLOGIES USED
-1. SCSS (styling)
-2. JavaScript (core features)
+## Technologies
+- JavaScript (ES6+) — game logic and DOM manipulation
+- SCSS/SASS — styles.
+- HTML5 — markup.
+## Installation
 
-
-## HOW TO START IT LOCALLY
-- Clone repository
-
-```
+Command to install project and dependencies
+```bash
 git clone https://github.com/predator-bites/2048-GAME.git
-```
-
-- Install dependencies
-
-```
+&& cd ./2048-GAME &&
 npm install
 ```
-
-- Start project on local machine
-
-```
+    
+Run project locally
+```bash
 npm start
 ```
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 
