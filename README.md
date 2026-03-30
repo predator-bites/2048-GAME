@@ -3,19 +3,18 @@
 
 Welcome to the 2048, a JavaScript-based implementation of the 2048 puzzle game. This project provides an interactive and engaging experience where players combine numbered tiles on a 4x4 grid to reach the 2048 tile. The game is developed using modern web technologies and aims to offer a seamless user experience.
 
-
-## Introduction
-2048 is a training project that helped me to improve planning of code and sort out JS knowledge base. 
-
-[Play for free](https://predator-bites.github.io/2048-GAME/)
-## Features
-
+### Key features 
 - Cozy design
 - Fast workflow
 - Smooth Tile Movement: Implements animations for appearance and tile merging
 - Score Tracking: Realtime calculation of score based on player progress
 - Win and Lose Conditions: Alerts the player when they win or lose the game with appropriate messages.
 - Restart Functionality: Allows players to restart the game at any time.
+  
+## Introduction
+2048 is a training project that helped me to improve planning of code and sort out JS knowledge base. 
+
+[Play for free](https://predator-bites.github.io/2048-GAME/)
 
 
 ## Technologies
