@@ -5,7 +5,7 @@ Welcome to the 2048, a JavaScript-based implementation of the 2048 puzzle game. 
 
 
 ## Introduction
-2048 is a training project that helped me to improve planning of my code, sort out JS knowledge on practise.
+2048 is a training project that helped me to improve planning of code and sort out JS knowledge base. 
 
 [Play for free](https://predator-bites.github.io/2048-GAME/)
 ## Features
