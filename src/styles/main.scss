@@ -1,82 +1,44 @@
+@use "./variables.scss" as variables;
+
 body {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #fbf8ef;
+  background: linear-gradient(45deg, variables.$green, variables.$gold);
   font-family: sans-serif;
   font-size: 24px;
   font-weight: 900;
 }
 
 .field-cell {
-  background: #d6cdc4;
+  background: variables.$vanilla;
   width: 75px;
   height: 75px;
   border-radius: 5px;
-  color: #776e65;
+  color: variables.$gray;
   box-sizing: border-box;
   text-align: center;
   vertical-align: center;
   user-select: none;
+  transition: 0.3s all;
 
-  &--2 {
-    background: #eee4da;
+  @each $value, $color in variables.$squares-background-colors {
+    &--#{$value} {
+      background: $color;
+      color: variables.$white;
+    }
   }
 
+  &--2,
   &--4 {
-    background: #ede0c8;
-  }
-
-  &--8 {
-    background: #f2b179;
-    color: #f9f6f2;
-  }
-
-  &--16 {
-    background: #f59563;
-    color: #f9f6f2;
-  }
-
-  &--32 {
-    background: #f67c5f;
-    color: #f9f6f2;
-  }
-
-  &--64 {
-    background: #f65e3b;
-    color: #f9f6f2;
-  }
-
-  &--128 {
-    background: #edcf72;
-    color: #f9f6f2;
-  }
-
-  &--256 {
-    background: #edcc61;
-    color: #f9f6f2;
-  }
-
-  &--512 {
-    background: #edc850;
-    color: #f9f6f2;
-  }
-
-  &--1024 {
-    background: #edc53f;
-    color: #f9f6f2;
-  }
-
-  &--2048 {
-    background: #edc22e;
-    color: #f9f6f2;
+    color: variables.$gray;
   }
 }
 
 .game-field {
-  background: #bbada0;
+  background: variables.$dirty-vanilla;
   border-spacing: 10px;
   border-radius: 5px;
 }
@@ -91,8 +53,8 @@ body {
 }
 
 h1 {
-  background: #edc22e;
-  color: #f9f6f2;
+  background: variables.$gold;
+  color: variables.$white;
   width: 75px;
   height: 75px;
   font-size: 24px;
@@ -109,11 +71,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #d6cdc4;
+  background: variables.$vanilla;
   width: 75px;
   height: 75px;
   border-radius: 5px;
-  color: #776e65;
+  color: variables.$gray;
   box-sizing: border-box;
   font-size: 16px;
   margin: 0 8px 0 0;
@@ -127,38 +89,38 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: #f9f6f2;
+  color: variables.$white;
   font-family: sans-serif;
   font-weight: 700;
   font-size: 16px;
   width: 75px;
   height: 75px;
 
-  transition: 0.25s ease background;
+  transition: 0.25s ease all;
 }
 
 .start {
-  background: #1dae28;
+  background: variables.$green;
   font-size: 20px;
 
   &:hover {
-    background: #179921;
+    background: variables.$green;
   }
 }
 
 .restart {
-  background: #f1b2b2;
+  background: variables.$red;
 
   &:hover {
-    background: #f87474;
+    background: variables.$concentrated-red;
   }
 }
 
 .message {
   box-sizing: border-box;
   width: 100%;
-  background: #d6cdc4;
-  color: #776e65;
+  background: variables.$vanilla;
+  color: variables.$gray;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
@@ -177,11 +139,45 @@ h1 {
 }
 
 .message-win {
-  background: #edc22e;
-  color: #f9f6f2;
+  background: variables.$gold;
+  color: variables.$white;
 }
 
 .message-container {
   width: 100%;
   height: 150px;
+}
+
+@keyframes tile-appear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes tile-merge {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tile-appear {
+  animation: tile-appear 0.15s ease-out;
+}
+
+.tile-merge {
+  animation: tile-merge 0.15s ease-out;
 }

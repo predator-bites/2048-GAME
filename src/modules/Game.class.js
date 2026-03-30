@@ -28,6 +28,7 @@ class Game {
       [0, 0, 0, 0],
     ];
     this.score = 0;
+    this.newCellPositions = [];
 
     this.loseMessage = document.querySelector(
       '.container .message-container .message-lose',
@@ -327,6 +328,7 @@ class Game {
     const randomElem = freeCells[randomIndex];
 
     this.state[randomElem[0]][randomElem[1]] = randomValue;
+    this.newCellPositions.push([randomElem[0], randomElem[1]]);
 
     return randomValue;
   }
@@ -343,9 +345,13 @@ class Game {
         const td = tr.children[indexOfElem];
         const value = this.state[indexOfRow][indexOfElem];
         const regExp = /field-cell--(\d+)/;
+        let oldValue = 0;
 
         for (const cls of [...td.classList]) {
-          if (cls.match(regExp)) {
+          const match = cls.match(regExp);
+
+          if (match) {
+            oldValue = parseInt(match[1]);
             td.classList.remove(cls);
           }
         }
@@ -355,10 +361,24 @@ class Game {
           td.setAttribute('class', 'field-cell');
         } else {
           td.textContent = value;
+          td.classList.remove('tile-appear', 'tile-merge');
           td.classList.add(`field-cell--${value}`);
+
+          const isNew = this.newCellPositions.some(
+            ([r, c]) => r === indexOfRow && c === indexOfElem,
+          );
+          const isMerge = oldValue !== 0 && value === oldValue * 2;
+
+          if (isNew) {
+            td.classList.add('tile-appear');
+          } else if (isMerge) {
+            td.classList.add('tile-merge');
+          }
         }
       }
     }
+
+    this.newCellPositions = [];
   }
 
   sortRow(row, mode) {
